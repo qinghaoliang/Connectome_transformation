@@ -7,6 +7,8 @@ from sklearn.metrics import r2_score, roc_auc_score
 
 def cpm_reg(all_edges, all_behav, seed, thresh=0.1, 
             alphas_ridge=10**np.linspace(2, -5, 10)):
+    """Connectome-based Predictive Modeling for regression"""
+
     # all_behav should be array of size (n,)
     n_splits = 10
     kf = KFold(n_splits=n_splits, shuffle=True, random_state=seed)
@@ -41,6 +43,8 @@ def cpm_reg(all_edges, all_behav, seed, thresh=0.1,
 
 
 def cpm_clf(all_edges, all_behav, seed, thresh=0.1):
+    """Connectome-based Predictive Modeling for classification"""
+
     # all_behav should be array of size (n,)
     n_splits = 10
     kf = KFold(n_splits=n_splits, shuffle=True, random_state=seed)

@@ -9,10 +9,10 @@ from spectral_embedding import spectral_embedding
 from scipy.stats import pearsonr
 from mats2edges import com2edges
 
-##########################################################################
-###### Learn the mapping across atlases using optimal transport ##########
-############ paired node-wise time series data is required ###############
-##########################################################################
+
+"""Learn the mapping across atlases using optimal transport
+ paired node-wise time series data is required 
+"""
 
 parser = argparse.ArgumentParser(description='learn FC mapping')
 parser.add_argument('-s',type=str,help="source atlas")

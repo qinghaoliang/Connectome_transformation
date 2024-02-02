@@ -30,18 +30,18 @@ source = args.s
 target = args.t
 seed = args.sd
 
-## load all y
+# load all y
 wm = np.load("hcp_wm.npy")
 age = np.load("hcpd_age.npy")
 
-## test the original performance
+# test the original performance
 modality = ["fc","sc"]
 results_original = np.zeros((2,2))
 at = target
 results_original[0, 0], results_original[0, 1] = CPM(at, "fc", "ridge", wm, seed)
 results_original[1, 0], results_original[1, 1] = CPM(at, "sc", "ridge", age, seed)
 
-## test the performance using transformed data
+# test the performance using transformed data
 modality = ["fc", "sc", "sc_fcmap"]
 trans_set = ["train", "test"]
 results_ot = np.zeros((4,2,2))

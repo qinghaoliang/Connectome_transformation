@@ -29,7 +29,7 @@ target = args.t
 task = args.task
 p = 50
 
-################# load data and mapping ##################
+"""load data and mapping"""
 fname = "./map/map_fc_" + source + "_" + target + ".npz"
 mapping = np.load(fname)
 Trans = mapping['Trans']
@@ -47,7 +47,7 @@ comR = np.zeros((nnode, nnode, nsub))
 rot = np.zeros(nsub)
 pot = np.zeros(nsub)
 
-################# reconstruction accuracy #################
+"""reconstruction accuracy"""
 for i in range(nsub):
     com_s = comS[:,:,i]
     com_t = comT[:,:,i]
@@ -64,7 +64,7 @@ for i in range(nsub):
 
 print(np.mean(rot))
 
-################## prediction accuracy ###################
+"""prediction accuracy"""
 edgesR = mats2edges(comR)
 edgesT = mats2edges(comT)
 

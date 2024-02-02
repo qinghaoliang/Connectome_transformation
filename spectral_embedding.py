@@ -1,8 +1,7 @@
 import numpy as np
 from sklearn.manifold import Isomap
-###############################################################
-######## Embedding the connectomes to the latent space ########
-###############################################################
+
+"""Embedding the connectomes to the latent space"""
 
 def spectral_embedding(A, p=50):
     ## spectral embedding
