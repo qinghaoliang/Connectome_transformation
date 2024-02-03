@@ -1,4 +1,4 @@
-# Connectome-based Predictive Modeling with Missing Data 
+# Resolving Atlas Divergence in Connectomes: A Lightweight Domain Adaptation Approach Using Optimal Transport
 Our manuscript is published at International Workshop on Graphs in Biomedical Image Analysis, MICCAI 2022 https://link.springer.com/chapter/10.1007/978-3-031-21083-9_12
 
 ## Method
